@@ -5,7 +5,7 @@
     Github: https://github.com/tonysangha
     Blog: http://tonysangha.com
 
-    * Script to save images received via iMessage on your MAC *
+    ** Script to save images received via iMessage on your MAC **
 
     Tested on OSX Yosemite and El Capitan
     Tested with Python 2.7.10
