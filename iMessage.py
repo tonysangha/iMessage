@@ -20,6 +20,7 @@ import shutil
 import exifread
 from datetime import datetime
 from random import randint
+import argparse
 
 # Declare empty dictionary/lists for use later in the code
 src_dict = {}  # Store all files in source
@@ -101,9 +102,13 @@ def copy_files(destination):
                    src_dict.values()[x][0], src_dict.values()[x][2], destination)
 
 def main(argv):
+    # Parse arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument("folder", help="Destination folder path for your photos")
+    args = parser.parse_args()
     populate_dict(path, src_dict)
-    populate_dict(argv[1], dst_dict)
-    copy_files(argv[1])
+    populate_dict(args.folder, dst_dict)
+    copy_files(args.folder)
 
 if __name__ == "__main__":
     main(sys.argv)
